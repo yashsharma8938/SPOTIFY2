@@ -1,0 +1,164 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        simple inline Spotify-like logo 
+        <svg viewBox="0 0 168 168" class="logo"><circle cx="84" cy="84" r="84" fill="#1DB954"/></svg>
+        <h1>MyPlayer</h1>
+      </div>
+      <nav>
+        <button class="nav-btn" data-view="home">🏠 Home</button>
+        <button class="nav-btn" data-view="playlists">🎧 Playlists</button>
+        <button class="nav-btn" data-view="library">📚 Library</button>
+        <button class="nav-btn" data-view="search">🔎 Search</button>
+      </nav>
+      <div class="account">
+        <div id="me">Not logged in</div>
+        <div class="auth">
+          <button id="loginBtn">Login</button>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
+      <hr/>
+      <div class="small-note">Built with Spotify Web API</div>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <input id="topSearch" placeholder="Search artists, tracks..." />
+      </header>
+
+      <section id="content" class="content">
+        <dynamic content injected here
+        <div id="homeView" class="view"></div>
+        <div id="playlistsView" class="view"></div>
+        <div id="libraryView" class="view"></div>
+        <div id="searchView" class="view"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="player">
+    <div class="player-left">
+      <div id="nowMeta">Nothing playing</div>
+    </div>
+    <div class="player-center">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn">▶️</button>
+      <button id="nextBtn">⏭</button>
+      <input id="seek" type="range" min="0" max="100" value="0"/>
+    </div>
+    <div class="player-right">
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5"/>
+    </div>
+  </footer>
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Search box styling */
+    .search-box {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 35px 8px 10px; /* space for icon */
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-box .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: gray;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <!-- simple inline Spotify-like logo -->
+        <svg viewBox="0 0 168 168" class="logo"><circle cx="84" cy="84" r="84" fill="#1DB954"/></svg>
+        <h1>MyPlayer</h1>
+      </div>
+      <nav>
+        <button class="nav-btn" data-view="home">🏠 Home</button>
+        <button class="nav-btn" data-view="playlists">🎧 Playlists</button>
+        <button class="nav-btn" data-view="library">📚 Library</button>
+        <button class="nav-btn" data-view="search">🔎 Search</button>
+      </nav>
+      <div class="account">
+        <div id="me">Not logged in</div>
+        <div class="auth">
+          <button id="loginBtn">Login</button>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
+      <hr/>
+      <div class="small-note">Built with Spotify Web API</div>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <div class="search-box">
+          <input id="topSearch" placeholder="Search artists, tracks..." />
+          <span class="search-icon">🔍</span>
+        </div>
+      </header>
+
+      <section id="content" class="content">
+        <!-- dynamic content injected here -->
+        <div id="homeView" class="view"></div>
+        <div id="playlistsView" class="view"></div>
+        <div id="libraryView" class="view"></div>
+        <div id="searchView" class="view"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="player">
+    <div class="player-left">
+      <div id="nowMeta">Nothing playing</div>
+    </div>
+    <div class="player-center">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn">▶</button>
+      <button id="nextBtn">⏭</button>
+      <input id="seek" type="range" min="0" max="100" value="0"/>
+    </div>
+    <div class="player-right">
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5"/>
+    </div>
+  </footer>
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
